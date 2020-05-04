@@ -70,7 +70,7 @@ def register():
     return response
 
 
-@app.route("/<fingerprint>", methods=["GET", "UPDATE", "DELETE"])
+@app.route("/<fingerprint>", methods=["GET", "PATCH", "DELETE"])
 def render_data(fingerprint):
     user = User.query.filter_by(fingerprint=fingerprint).first()
     if not user: return abort(404)
