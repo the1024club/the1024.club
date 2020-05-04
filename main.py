@@ -5,11 +5,11 @@ import asyncio
 from sanic import Sanic, response
 from databases import Database
 
-app = Sanic("1k")
-db = Database("sqlite:///1k.db")
+app = Sanic('1k')
+db = Database('sqlite:///1k.db')
 
 
-@app.route("/")
+@app.route('/', methods=['GET', 'HEAD'])
 async def welcome(request):
     return response.text("Welcome to the1024.club")
 
