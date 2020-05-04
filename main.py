@@ -21,7 +21,8 @@ async def init():
     await db.execute("""CREATE TABLE IF NOT EXISTS the_goods (
                             id INTEGER PRIMARY KEY,
                             fingerprint TEXT NOT NULL UNIQUE,
-                            block TEXT
+                            pubkey TEXT NOT NULL UNIQUE,
+                            kilo TEXT
                         )""")
 
 
