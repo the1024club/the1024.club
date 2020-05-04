@@ -9,3 +9,4 @@ Goals:
 - private key sign transactions to the api for CRUD of your 1k
 - ability to set mime-type of your 1k
 
+**WARNING: The keys `ex_private.pem` and `public.pem` exist solely to serve as placeholders during testing. Do not use them in a setting where security is needed!**
