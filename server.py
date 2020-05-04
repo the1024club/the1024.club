@@ -72,9 +72,9 @@ def register():
 
 @app.route("/<fingerprint>", methods=["GET", "UPDATE", "DELETE"])
 def render_data(fingerprint):
+    user = User.query.filter_by(fingerprint=fingerprint).first()
+    if not user: return abort(404)
     if request.method == "GET":
-        user = User.query.filter_by(fingerprint=fingerprint).first()
-        if not user: return abort(404)
         resp = make_response(user.data or b"", 200)
         resp.headers["Content-Type"] = user.mime_type
         return resp
