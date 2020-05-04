@@ -82,4 +82,4 @@ def render_data(fingerprint):
 
 
 if __name__ == "__main__":
-    app.run(port=65532)
+    app.run(port=42069)
